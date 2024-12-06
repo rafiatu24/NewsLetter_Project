@@ -6,18 +6,11 @@
     --accent-tomato: #FF6257;
     --accent-gradient: linear-gradient(225deg, #FF6A42 0%, #FF527B 100%);
 }
-
-
-.dismiss-btn:hover {
-    background: var(--accent-gradient);
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     font-family: "Roboto", sans-serif;
     font-weight: 700;
@@ -28,23 +21,20 @@ body {
     min-height: 100vh;
     line-height: 1.5;
 }
-
-ul{
+ul {
     font-size: 16px;
     font-weight: 400;
 }
-p{
+p {
     font-size: 16px;
     font-weight: 400;
-
 }
-
 .container {
     max-width: 928px;
-    width: 50%;
-    
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
 }
-
 .signup-card {
     display: flex;
     background-color: var(--primary-white);
@@ -52,22 +42,17 @@ p{
     width: 100%;
     overflow: hidden;
     box-shadow: 0 15px 60px rgba(0, 0, 0, 0.15);
-    height: 100%;
     padding: 10px;
 }
-
 .signup-content {
     flex: 1;
     width: 55%;
-    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 50px;
-    border-radius: 15px; 
-
+    border-radius: 15px;
 }
-
 .signup-image {
     width: 45%;
     background-image: url('illustration-sign-up-desktop.svg');
@@ -76,43 +61,29 @@ p{
     padding: 30px;
     border-radius: 15px;
     background-repeat: no-repeat;
-    margin-right: 5px;
-   
 }
-
 .benefits-list {
     list-style-type: none;
     margin: 1.5rem 0;
 }
-
 .benefits-list li {
     position: relative;
     display: flex;
     align-items: center;
     margin-bottom: 10px;
 }
-
 .benefits-list li span {
     margin-left: 20px;
-   
-
 }
-
-
-
-
-
 .form-group {
     margin-bottom: 1.5rem;
 }
-
 label {
     display: block;
     font-weight: bold;
     margin-bottom: 0.5rem;
     font-size: 0.875rem;
 }
-
 input {
     width: 70%;
     padding: 1rem;
@@ -122,24 +93,20 @@ input {
     transition: all 0.3s ease;
     height: 40px;
 }
-
 input:focus {
     border-color: var(--accent-tomato);
     box-shadow: 0 0 0 4px rgba(255, 98, 87, 0.2);
 }
-
 input.error {
     border-color: var(--accent-tomato);
     background-color: rgba(255, 98, 87, 0.1);
 }
-
 .error-message {
     color: var(--accent-tomato);
     font-size: 0.75rem;
     margin-top: 0.5rem;
     display: block;
 }
-
 .submit-btn {
     width: 70%;
     background: var(--primary-charcoal);
@@ -151,11 +118,9 @@ input.error {
     transition: background 0.3s ease;
     height: 40px;
 }
-
 .submit-btn:hover {
     background: var(--accent-gradient);
 }
-
 .success-modal {
     display: none;
     position: fixed;
@@ -168,13 +133,11 @@ input.error {
     justify-content: center;
     align-items: center;
 }
-
-.rafia{
+.rafia {
     font-size: 56px;
     line-height: normal;
     text-align: start;
 }
-
 .success-content {
     background-color: var(--primary-white);
     max-width: 504px;
@@ -183,13 +146,10 @@ input.error {
     text-align: start;
     align-items: center;
 }
-
 .success-icon {
     margin-bottom: 2rem;
 }
-
 .dismiss-btn {
-   
     margin-top: 2rem;
     width: 93%;
     background: var(--primary-charcoal);
@@ -200,32 +160,67 @@ input.error {
     cursor: pointer;
     transition: background 0.3s ease;
 }
-
 /* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .signup-card {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .signup-content {
+        width: 100%;
+        padding: 20px;
+    }
+    .signup-image {
+        width: 100%;
+        height: 250px;
+        background-image: url('illustration-sign-up-mobile.svg');
+        background-position: center;
+    }
+}
+@media screen and (max-width: 768px) {
+    .signup-content {
+        padding: 20px;
+    }
+    .signup-image {
+        background-size: cover;
+        height: 200px;
+    }
+    .container {
+        width: 90%;
+    }
+    .submit-btn {
+        width: 80%;
+    }
+    .benefits-list li {
+        font-size: 14px;
+    }
+    .rafia {
+        font-size: 40px;
+    }
+}
 @media screen and (max-width: 375px) {
-    .signup-image{
-        background-image: url('illustration-sign-up-mobile.svg')
+    .signup-image {
+        background-image: url('illustration-sign-up-mobile.svg');
+        height: 200px;
     }
     .signup-card {
-        display: flex;
-        height: 80%;
-     
-        /* flex-direction: column; */
+        flex-direction: column;
+        height: auto;
     }
-
     .signup-content {
-        width: 50%;
-        background-color: #242742;
-        height: 100%;
+        width: 100%;
+        padding: 20px;
     }
-
+    .submit-btn {
+        width: 90%;
+    }
     .success-content {
-        /* margin: 1rem;
-        padding: 2rem;
-        width: calc(100% - 2rem); */
-        width: 50%;
-        height: 50%;
+        width: 80%;
+        height: auto;
         background-color: #FF527B;
-    }  
-    
+        padding: 2rem;
+    }
+    .rafia {
+        font-size: 30px;
+    }
 }
