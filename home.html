@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter Signup</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="container">
+        <div class="signup-card">
+            <div class="signup-content">
+                <h1>Stay updated!</h1>
+                <p>Join 60,000+ product managers receiving monthly updates on:</p>
+                <ul class="benefits-list">
+                    <li><img src="icon-list.svg" alt=""><span>Product discovery and building what matters</span></li>
+                    <li><img src="icon-list.svg" alt=""><span>Measuring to ensure updates are a success</span></li>
+                    <li> <img src="icon-list.svg" alt=""><span>And much more!</span></li>
+                </ul>
+
+                <form id="signup-form" novalidate>
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            placeholder="email@company.com" 
+                            required
+                        >
+                        <span class="error-message" id="email-error"></span>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        Subscribe to monthly newsletter
+                    </button>
+                   
+                </form>
+             
+            </div>
+            <div class="signup-image">
+                
+            </div>
+
+        <div class="success-modal" id="success-modal">
+            <div class="success-content">
+                <img src="icon-success.svg" alt="Success" class="success-icon">
+                <h2 class="rafia" >Thanks for subscribing!</h2>
+                <p>A confirmation email has been sent to <span id="confirmation-email"></span>. 
+                Please open it and click the button inside to confirm your subscription.</p>
+                <button class="dismiss-btn" id="dismiss-btn">Dismiss message</button>
+            </div>
+        </div>
+
+      
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
